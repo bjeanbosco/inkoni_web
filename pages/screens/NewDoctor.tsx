@@ -22,7 +22,7 @@ const NewAppointments: React.FC = () => {
     <div className="flex ml-4">
       <Sidebar />
 
-      <div className="flex-1 bg-maincolor ml-60 p-10">
+      <div className="flex-1 bg-maincolor h-screen p-3 ml-60 p-3">
 
         <h1 className="ml-10 mt-6 text-2xl font-bold">
           Appointments {">"}
@@ -30,7 +30,7 @@ const NewAppointments: React.FC = () => {
         </h1>
 
         {/* Square-like form container */}
-        <div className="bg-primary border border-gray-400 rounded ml-20 mr-20 p-6 mt-6 1xl">
+        <div className="bg-primary border border-gray-400 rounded ml-40 mr-40 p-6 mt-6 1xl">
           <h2 className="text-xl font-bold mb-4">Doctor Infromation</h2>
 
           {/* Form */}

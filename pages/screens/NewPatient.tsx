@@ -9,8 +9,6 @@ const NewAppointments: React.FC = () => {
   const [phoneNumber, setPhoneNumber] = useState("");
   const [insuranceType, setInsuranceType] = useState("");
   const [dateOfBirth, setDateOfBirth] = useState("");
-  const [appointmentDate, setAppointmentDate] = useState("");
-  const [selectedService, setSelectedService] = useState("");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -22,7 +20,7 @@ const NewAppointments: React.FC = () => {
     <div className="flex ml-4">
       <Sidebar />
 
-      <div className="flex-1 bg-maincolor ml-60 p-10">
+      <div className="flex-1 bg-maincolor h-screen p-3 ml-60 p-3">
 
         <h1 className="ml-10 mt-6 text-2xl font-bold">
           Appointments {">"}

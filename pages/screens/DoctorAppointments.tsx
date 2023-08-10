@@ -63,7 +63,7 @@ const DoctorAppointments: React.FC = () => {
     <div className="flex ml-4">
       <Sidebar />
 
-      <div className="flex-1 bg-maincolor ml-60 p-10">
+      <div className="flex-1 bg-maincolor h-screen p-3 ml-60 p-3">
         <button className="absolute mt-4 right-4 bg-orange text-white font-bold px-4 py-2 rounded">
           New Appointments
         </button>
@@ -71,7 +71,7 @@ const DoctorAppointments: React.FC = () => {
         <h1 className="ml-10 mt-6 text-2xl font-bold">
           Appointments {">"}
           <span className="text-orange font-bold">General Practitioner</span>{" > "}
-          <span className="text-blue-300 font-bold">Dr.Tanto Spiral</span>
+          <span className="text-blue-300">Dr.Tanto Spiral</span>
         </h1>
 
         {/* Table */}

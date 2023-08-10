@@ -1,20 +1,24 @@
-import Link from "next/link";
-import React, { useEffect, useState } from "react";
-import { useRouter } from "next/router";
+import React from "react";
 import Sidebar from "./Sidebar";
+import router from "next/router";
 
 const Appointments: React.FC = () => {
-  const router = useRouter();
-  const { pathname } = router;
   const squaresData = [
     {
       id: 1,
-      imageSrc: "image-url-1.jpg",
-      title: "John Doe",
+      // bring image from styles images folder
+
+
+      imageSrc: "https://s3-eu-west-1.amazonaws.com/intercare-web-public/wysiwyg-uploads%2F1558083610864-general_practitioner.jpg",
+      title: "General Practitioner",
       age: 30,
       gender: "Male",
     },
+   
+
+    // ... other appointments
   ];
+
   const handleNewAppointmentsClick = () => {
     router.push("/screens/NewAppointment");
   };
@@ -23,153 +27,235 @@ const Appointments: React.FC = () => {
     <div className="flex ml-4">
       <Sidebar />
 
-      <div className="flex-1 bg-maincolor ml-60 p-3">
-        <button
+      <div className="flex-1 bg-maincolor h-screen p-3 ml-60 p-3">
+      <button
           onClick={handleNewAppointmentsClick}
           className="absolute mt-4 right-4 bg-orange text-white font-bold px-4 py-2 rounded"
         >
           New Appointments
         </button>
 
-        <h1 className="ml-6 mt-10 text-2xl font-bold">Appointments</h1>
-        <div className="grid grid-cols-3 gap-2 ml-3 mt-4">
-          <div className="relative mr-2">
-            <div className="bg-photos w-8/10 h-60">
-              <h1 className="p-4 text-xl font-bold ml-6">
-                General Practitioner
-              </h1>
-              <div className="ml-10 w-40 h-40">
-                {/* Wrap the image with an anchor tag */}
-                <a href="/screens/Practitioner">
-                  <img
-                    src="https://randomuser.me/api/portraits/men/1.jpg"
-                    alt="User Profile"
-                    className="w-full h-full object-cover octagon-mask"
-                  />
-                </a>
+        <h1 className="ml-6 mt-10 text-2xl font-bold">
+          Appointments
+        </h1>
+        
+        <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4 mt-4 ml-6 mr-60">
+          {/* Repeat this block for each card */}
+          {squaresData.map((appointment) => (
+            <div
+              key={appointment.id}
+              className="bg-photos p-2 rounded-md shadow-md"
+            >
+              <div className="flex items-center">
+                <div className="relative ml-4 mb-4">
+                  <h1 className="text-xl font-bold mb-3 ml-4  text-center">
+                    {appointment.title}
+                  </h1>
+                  <a href="/screens/Practitioner">
+                    <img
+                      src="https://s3-eu-west-1.amazonaws.com/intercare-web-public/wysiwyg-uploads%2F1558083610864-general_practitioner.jpg"
+                      alt="User Profile"
+                      className="w-full h-36 object-cover "
+                    />
+                  </a>
+                </div>
+                <div className="ml-4">
+                  <p>Today: 11</p>
+                  <p>This Week: 11</p>
+                  <p>Emergency: 1</p>
+                </div>
               </div>
             </div>
-            <div className="absolute top-20 right-20 pr-10 pt-6">
-              <p>Today: 11</p>
-              <p>This Week: 11</p>
-              <p>Emergency: 1</p>
-            </div>
-          </div>
-
-          <div className="relative ml-2">
-            <div className="bg-photos w-8/10 h-60">
-              <h1 className="p-4 text-xl font-bold ml-6">
-                General Practitioner
-              </h1>
-              <div className="ml-10 w-40 h-40">
-                <img
-                  src="https://randomuser.me/api/portraits/men/1.jpg"
-                  alt="User Profile"
-                  className="w-full h-full object-cover octagon-mask"
-                />
+          ))}
+          {/* End of repeated block */}
+          {squaresData.map((appointment) => (
+            <div
+              key={appointment.id}
+              className="bg-photos p-2 rounded-md shadow-md"
+            >
+              <div className="flex items-center">
+                <div className="relative ml-4 mb-4">
+                  <h1 className="text-xl font-bold mb-3 ml-4  text-center">
+                  Pediatrics
+                  </h1>
+                  <a href="/screens/Practitioner">
+                    <img
+                      src="https://sspediatrics.com/wp-content/uploads/2022/09/What-is-a-Pediatrician.jpeg"
+                      alt="User Profile"
+                      className="w-full h-36 object-cover "
+                    />
+                  </a>
+                </div>
+                <div className="ml-4">
+                  <p>Today: 11</p>
+                  <p>This Week: 11</p>
+                  <p>Emergency: 1</p>
+                </div>
               </div>
             </div>
-            <div className="absolute top-20 right-20 pr-10 pt-6">
-              <p>Today: 11</p>
-              <p>This Week: 11</p>
-              <p>Emergency: 1</p>
-            </div>
-          </div>
-          <div className="relative">
-            <div className="bg-photos w-8/10 h-60">
-              <h1 className="p-4 text-xl font-bold ml-6">
-                General Practitioner
-              </h1>
-              <div className="ml-10 w-40 h-40">
-                <img
-                  src="https://randomuser.me/api/portraits/men/1.jpg"
-                  alt="User Profile"
-                  className="w-full h-full object-cover octagon-mask"
-                />
+          ))}
+          {/* End of repeated block */}
+          {squaresData.map((appointment) => (
+            <div
+              key={appointment.id}
+              className="bg-photos p-2 rounded-md shadow-md"
+            >
+              <div className="flex items-center">
+                <div className="relative ml-4 mb-4">
+                  <h1 className="text-xl font-bold mb-3 ml-4  text-center">
+                  Gastroenterology
+                  </h1>
+                  <a href="/screens/Practitioner">
+                    <img
+                      src="https://polarishospitals.com/wp-content/uploads/elementor/thumbs/Polaris-Gastroenterology-p4z7dmkisf07rf49hnd04begy3bzdavsv7aihrdv1s.jpg"
+                      alt="User Profile"
+                      className="w-full h-36 object-cover "
+                    />
+                  </a>
+                </div>
+                <div className="ml-4">
+                  <p>Today: 11</p>
+                  <p>This Week: 11</p>
+                  <p>Emergency: 1</p>
+                </div>
               </div>
             </div>
-            <div className="absolute top-20 right-20 pr-10 pt-6">
-              <p>Today: 11</p>
-              <p>This Week: 11</p>
-              <p>Emergency: 1</p>
-            </div>
-          </div>
-          <div className="relative">
-            <div className="bg-photos w-8/10 h-60">
-              <h1 className="p-4 text-xl font-bold ml-6">
-                General Practitioner
-              </h1>
-              <div className="ml-10 w-40 h-40">
-                <img
-                  src="https://randomuser.me/api/portraits/men/1.jpg"
-                  alt="User Profile"
-                  className="w-full h-full object-cover octagon-mask"
-                />
+          ))}
+         {squaresData.map((appointment) => (
+            <div
+              key={appointment.id}
+              className="bg-photos p-2 rounded-md shadow-md"
+            >
+              <div className="flex items-center">
+                <div className="relative ml-4 mb-4">
+                  <h1 className="text-xl font-bold mb-3 ml-4  text-center">
+                  Ophthalmology
+                  </h1>
+                  <a href="/screens/Practitioner">
+                    <img
+                      src="https://alhammadi.med.sa/ImagesProjects/26.jpg"
+                      alt="User Profile"
+                      className="w-full h-36 object-cover "
+                    />
+                  </a>
+                </div>
+                <div className="ml-4">
+                  <p>Today: 11</p>
+                  <p>This Week: 11</p>
+                  <p>Emergency: 1</p>
+                </div>
               </div>
             </div>
-            <div className="absolute top-20 right-20 pr-10 pt-6">
-              <p>Today: 11</p>
-              <p>This Week: 11</p>
-              <p>Emergency: 1</p>
-            </div>
-          </div>
-          <div className="relative">
-            <div className="bg-photos w-8/10 h-60">
-              <h1 className="p-4 text-xl font-bold ml-6">
-                General Practitioner
-              </h1>
-              <div className="ml-10 w-40 h-40">
-                <img
-                  src="https://randomuser.me/api/portraits/men/1.jpg"
-                  alt="User Profile"
-                  className="w-full h-full object-cover octagon-mask"
-                />
+          ))}
+         
+          {/* End of repeated block */}
+          {squaresData.map((appointment) => (
+            <div
+              key={appointment.id}
+              className="bg-photos p-2 rounded-md shadow-md"
+            >
+              <div className="flex items-center">
+                <div className="relative ml-4 mb-4">
+                  <h1 className="text-xl font-bold mb-3 ml-4  text-center">
+                    Dentists
+                  </h1>
+                  <a href="/screens/Practitioner">
+                    <img
+                      src="https://doctorlaurenbecker.com/tpn/gen/GettyImages-1016764012.jpg"
+                      alt="User Profile"
+                      className="w-full h-36 object-cover "
+                    />
+                  </a>
+                </div>
+                <div className="ml-4">
+                  <p>Today: 11</p>
+                  <p>This Week: 11</p>
+                  <p>Emergency: 1</p>
+                </div>
               </div>
             </div>
-            <div className="absolute top-20 right-20 pr-10 pt-6">
-              <p>Today: 11</p>
-              <p>This Week: 11</p>
-              <p>Emergency: 1</p>
-            </div>
-          </div>
-          <div className="relative">
-            <div className="bg-photos w-8/10 h-60">
-              <h1 className="p-4 text-xl font-bold ml-6">
-                General Practitioner
-              </h1>
-              <div className="ml-10 w-40 h-40">
-                <img
-                  src="https://randomuser.me/api/portraits/men/1.jpg"
-                  alt="User Profile"
-                  className="w-full h-full object-cover octagon-mask"
-                />
+          ))}
+           {/* End of repeated block */}
+           {squaresData.map((appointment) => (
+            <div
+              key={appointment.id}
+              className="bg-photos p-2 rounded-md shadow-md"
+            >
+              <div className="flex items-center">
+                <div className="relative ml-4 mb-4">
+                  <h1 className="text-xl font-bold mb-3 ml-4  text-center">
+                   Neology
+                  </h1>
+                  <a href="/screens/Practitioner">
+                    <img
+                      src="https://www.topdoctors.co.uk/files/Image/large/58b0424e-411c-4243-9228-4a0725bbab96.jpg"
+                      alt="User Profile"
+                      className="w-full h-36 object-cover "
+                    />
+                  </a>
+                </div>
+                <div className="ml-4">
+                  <p>Today: 11</p>
+                  <p>This Week: 11</p>
+                  <p>Emergency: 1</p>
+                </div>
               </div>
             </div>
-            <div className="absolute top-20 right-20 pr-10 pt-6">
-              <p>Today: 11</p>
-              <p>This Week: 11</p>
-              <p>Emergency: 1</p>
-            </div>
-          </div>
-          <div className="relative">
-            <div className="bg-photos w-8/10 h-60">
-              <h1 className="p-4 text-xl font-bold ml-6">
-                General Practitioner
-              </h1>
-              <div className="ml-10 w-40 h-40">
-                <img
-                  src="https://randomuser.me/api/portraits/men/1.jpg"
-                  alt="User Profile"
-                  className="w-full h-full object-cover octagon-mask"
-                />
+          ))}
+           {/* End of repeated block */}
+           {squaresData.map((appointment) => (
+            <div
+              key={appointment.id}
+              className="bg-photos p-2 rounded-md shadow-md"
+            >
+              <div className="flex items-center">
+                <div className="relative ml-4 mb-4">
+                  <h1 className="text-xl font-bold mb-3 ml-4  text-center">
+                    Cardiology
+                  </h1>
+                  <a href="/screens/Practitioner">
+                    <img
+                      src="https://www.camc.org/sites/default/files/styles/800x600/public/2020-09/Cardiology_hero_0.jpg?itok=olV0f2r9"
+                      alt="User Profile"
+                      className="w-full h-36 object-cover "
+                    />
+                  </a>
+                </div>
+                <div className="ml-4">
+                  <p>Today: 11</p>
+                  <p>This Week: 11</p>
+                  <p>Emergency: 1</p>
+                </div>
               </div>
             </div>
-            <div className="absolute top-20 right-20 pr-10 pt-6">
-              <p>Today: 11</p>
-              <p>This Week: 11</p>
-              <p>Emergency: 1</p>
+          ))}
+           {/* End of repeated block */}
+           {squaresData.map((appointment) => (
+            <div
+              key={appointment.id}
+              className="bg-photos p-2 rounded-md shadow-md"
+            >
+              <div className="flex items-center">
+                <div className="relative ml-4 mb-4">
+                  <h1 className="text-xl font-bold mb-3 ml-4  text-center">
+                    Determinology
+                  </h1>
+                  <a href="/screens/Practitioner">
+                    <img
+                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN4BcZQU5OfLOYJqF6m861UkEGNrivGFPhkw"
+                      alt="User Profile"
+                      className="w-full h-36 object-cover "
+                    />
+                  </a>
+                </div>
+                <div className="ml-4">
+                  <p>Today: 11</p>
+                  <p>This Week: 11</p>
+                  <p>Emergency: 1</p>
+                </div>
+              </div>
             </div>
-          </div>
+          ))}
         </div>
       </div>
     </div>

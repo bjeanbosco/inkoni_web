@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Sidebar from "./Sidebar";
+import router from "next/router";
 
 const NewAppointments: React.FC = () => {
   const [firstName, setFirstName] = useState("");
@@ -12,31 +13,29 @@ const NewAppointments: React.FC = () => {
   const [appointmentDate, setAppointmentDate] = useState("");
   const [selectedService, setSelectedService] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission logic here
-    // You can use the form data stored in state variables
+  const handleNewAppointmentsClick = () => {
+    router.push("/screens/NewAppointment");
   };
+
 
   return (
     <div className="flex ml-4">
       <Sidebar />
 
-      <div className="flex-1 bg-maincolor ml-60 p-10">
-
-        <h1 className="ml-10 mt-6 text-2xl font-bold">
-          Appointments {">"}
-          <span className="text-orange font-bold">New Appointment</span>
+      <div className="flex-1 bg-maincolor h-screen p-3 ml-60 p-3">
+      <h1 className="ml-6 mt-10 text-2xl font-bold">
+          Appointments {">"}{" "}
+          <span className="text-orange">New Appointments</span>
         </h1>
 
         {/* Square-like form container */}
-        <div className="bg-primary border border-gray-400 rounded ml-20 mr-20 p-6 mt-6 1xl">
-          <h2 className="text-xl font-bold mb-4">Driver infromation</h2>
+        <div className="bg-primary border border-gray-400 rounded ml-20 mr-60 p-6 mt-6 1xl">
+          <h2 className="text-xl font-bold mb-4 ml-10">Deriver Information</h2>
 
           {/* Form */}
-          <form onSubmit={handleSubmit}>
-            {/* First Name and Last Name */}
-            <div className="grid grid-cols-2 gap-4 mb-4">
+          <form className="ml-10 mr-10">
+
+            <div className="grid grid-cols-2 gap-4 mb-4 ">
               <div>
                 <label htmlFor="firstName">First Name</label>
                 <input
@@ -73,7 +72,7 @@ const NewAppointments: React.FC = () => {
 
             {/* Email */}
             <div className="mb-4">
-              <label htmlFor="email">Email</label>
+              <label htmlFor="email">Email Address</label>
               <input
                 type="text"
                 id="email"
@@ -144,7 +143,7 @@ const NewAppointments: React.FC = () => {
                 className="border rounded p-2 w-full bg-maincolor"
               >
                 <option value="">Select a Service</option>
-                {/* Add options for different services */}
+              
               </select>
             </div>
 
