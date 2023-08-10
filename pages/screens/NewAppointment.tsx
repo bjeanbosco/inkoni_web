@@ -29,8 +29,8 @@ const NewAppointments: React.FC = () => {
         </h1>
 
         {/* Square-like form container */}
-        <div className="bg-primary border border-gray-400 rounded ml-20 mr-60 p-6 mt-6 1xl">
-          <h2 className="text-xl font-bold mb-4 ml-10">Deriver Information</h2>
+        <div className="bg-primary border border-gray-400 rounded ml-10 p-2 mt-10 1xl w-6/10">
+          <h2 className="text-xl font-bold mt-10 mb-6  ml-10">Deriver Information</h2>
 
           {/* Form */}
           <form className="ml-10 mr-10">
@@ -149,7 +149,7 @@ const NewAppointments: React.FC = () => {
 
             {/* Register Button */}
             <div className="flex justify-center">
-              <button type="submit" className="bg-orange text-white font-bold px-4 py-2 rounded">
+              <button type="submit" className="bg-orange text-white font-bold px-10 py-2 rounded">
                 Register
               </button>
             </div>

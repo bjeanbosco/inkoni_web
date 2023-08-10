@@ -1,5 +1,6 @@
 import React from "react";
 import Sidebar from "./Sidebar";
+import router from "next/router";
 
 const Appointments: React.FC = () => {
   const squaresData = [
@@ -24,13 +25,19 @@ const Appointments: React.FC = () => {
   
     // Add more appointment data with different images
   ];
+  const handleNewAppointmentsClick = () => {
+    router.push("/screens/NewAppointment");
+  };
 
   return (
     <div className="flex ml-4">
       <Sidebar />
 
       <div className="flex-1 bg-maincolor h-screen p-3 ml-60 p-3">
-        <button className="absolute mt-4 right-4 bg-orange text-white font-bold px-4 py-2 rounded">
+      <button
+          onClick={handleNewAppointmentsClick}
+          className="absolute mt-4 right-4 bg-orange text-white font-bold px-4 py-2 rounded"
+        >
           New Appointments
         </button>
 

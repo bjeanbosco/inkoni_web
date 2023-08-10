@@ -5,9 +5,8 @@ import { MdOutlineDashboard, MdOutlineManageSearch } from "react-icons/md";
 import { PiUsersBold } from "react-icons/pi";
 import { LuSettings, LuCalendarDays } from "react-icons/lu";
 import { BsBagPlusFill, BsPersonVcard } from "react-icons/bs";
-import { FaUserClock} from "react-icons/fa";
+import { FaUserClock } from "react-icons/fa";
 import { Icon } from "@iconify/react";
-
 
 const Sidebar: React.FC = () => {
   const router = useRouter();
@@ -71,103 +70,145 @@ const Sidebar: React.FC = () => {
             LA CROIX DU SUD
           </h1>
 
-          <ul className="mt-10 ml-10 mb-20">
-            {/*  begining of list  */}
+          <ul className="mt-10">
+            {/*  begining li  */}
 
             <li className="mb-4">
-              <div className="group flex items-center w-full h-10 transition-colors duration-300 ease-in-out hover:bg-photos hover:text-skyblue">
-                <MdOutlineDashboard className="text-white mr-3 text-2xl hover:text-skyblue " />
-                <Link
-                  href="#"
-                  className="flex-1 font-bold text-white text-xl no-underline font-roboto hover:text-skyblue"
-                >
-                  Overview
-                </Link>
+              <div className="group flex items-center transition-colors duration-300 ease-in-out hover:bg-photos">
+                <div className="flex items-center w-full ml-10">
+                  <MdOutlineDashboard className="text-white mr-3 text-2xl group-hover:text-skyblue" />
+                  <Link
+                    href="#"
+                    className="flex-1 font-bold text-white text-xl no-underline font-roboto group-hover:text-skyblue"
+                  >
+                    Overview
+                  </Link>
+                </div>
               </div>
             </li>
 
-            <li className="mb-4 flex items-center">
-              <LuCalendarDays className="text-white mr-3 text-xl " />
-              <Link
-                href="/screens/Appointments"
-                className="font-bold text-white text-xl group-hover:text-white no-underline font-roboto"
-              >
-                Appointments
-              </Link>
+            {/* appointments */}
+            <li className="mb-4">
+              <div className="group flex items-center transition-colors duration-300 ease-in-out hover:bg-photos">
+                <div className="flex items-center w-full ml-10">
+                  <LuCalendarDays className="text-white mr-3 text-2xl group-hover:text-skyblue" />
+                  <Link
+                    href="/screens/Appointments"
+                    className="flex-1 font-bold text-white text-xl no-underline font-roboto group-hover:text-skyblue"
+                  >
+                    Appointments
+                  </Link>
+                </div>
+              </div>
             </li>
 
-            <li className="mb-4 flex items-center">
-              <BsBagPlusFill className="text-white mr-3 text-xl" />
-              <Link
-                href="/screens/Doctor"
-                className="font-bold text-white text-xl group-hover:text-white no-underline font-roboto"
-              >
-                Doctors
-              </Link>
+            {/* Doctors */}
+
+            <li className="mb-4">
+              <div className="group flex items-center transition-colors duration-300 ease-in-out hover:bg-photos">
+                <div className="flex items-center w-full ml-10">
+                  <BsBagPlusFill className="text-white mr-3 text-2xl group-hover:text-skyblue" />
+                  <Link
+                    href="/screens/Doctor"
+                    className="flex-1 font-bold text-white text-xl no-underline font-roboto group-hover:text-skyblue"
+                  >
+                    Doctors
+                  </Link>
+                </div>
+              </div>
             </li>
-            <li className="mb-4 flex items-center">
-              <FaUserClock className="text-white mr-3 text-xl" />
-              <Link
-                href="/screens/Patients"
-                className="font-bold text-white text-xl group-hover:text-white no-underline font-roboto"
-              >
-                Patients
-              </Link>
+            {/* Patients */}
+            <li className="mb-4">
+              <div className="group flex items-center transition-colors duration-300 ease-in-out hover:bg-photos">
+                <div className="flex items-center w-full ml-10">
+                  <FaUserClock className="text-white mr-3 text-2xl group-hover:text-skyblue" />
+                  <Link
+                    href="/screens/Patients"
+                    className="flex-1 font-bold text-white text-xl no-underline font-roboto group-hover:text-skyblue"
+                  >
+                    Patients
+                  </Link>
+                </div>
+              </div>
+            </li>
+            {/* Results */}
+            <li className="mb-4">
+              <div className="group flex items-center transition-colors duration-300 ease-in-out hover:bg-photos">
+                <div className="flex items-center w-full ml-10">
+                  <MdOutlineManageSearch className="text-white mr-3 text-2xl group-hover:text-skyblue" />
+                  <Link
+                    href="#Results"
+                    className="flex-1 font-bold text-white text-xl no-underline font-roboto group-hover:text-skyblue"
+                  >
+                    Results
+                  </Link>
+                </div>
+              </div>
+            </li>
+            {/* Results */}
+            <li className="mb-4">
+              <div className="group flex items-center transition-colors duration-300 ease-in-out hover:bg-photos">
+                <div className="flex items-center w-full ml-10">
+                  <BsPersonVcard className="text-white mr-3 text-2xl group-hover:text-skyblue" />
+                  <Link
+                    href="#Drivers"
+                    className="flex-1 font-bold text-white text-xl no-underline font-roboto group-hover:text-skyblue"
+                  >
+                    Drivers
+                  </Link>
+                </div>
+              </div>
+            </li>
+            {/* transfer */}
+            <li className="mb-4">
+              <div className="group flex items-center transition-colors duration-300 ease-in-out hover:bg-photos">
+                <div className="flex items-center w-full ml-10">
+                  <Icon
+                    icon="mdi:transfer"
+                    className="text-white mr-3 text-2xl group-hover:text-skyblue"
+                  />
+                  <Link
+                    href="#Transfer"
+                    className="flex-1 font-bold text-white text-xl no-underline font-roboto group-hover:text-skyblue"
+                  >
+                    Transfer
+                  </Link>
+                </div>
+              </div>
+            </li>
+            {/* transfer */}
+            <li className="mb-4">
+              <div className="group flex items-center transition-colors duration-300 ease-in-out hover:bg-photos">
+                <div className="flex items-center w-full ml-10">
+                  <PiUsersBold className="text-white mr-3 text-2xl group-hover:text-skyblue" />
+                  <Link
+                    href="#users"
+                    className="flex-1 font-bold text-white text-xl no-underline font-roboto group-hover:text-skyblue"
+                  >
+                    Users
+                  </Link>
+                </div>
+              </div>
             </li>
 
-            <li className="mb-4 flex items-center">
-              <MdOutlineManageSearch className="text-white mr-1 text-3xl" />
-              <Link
-                href="#Overview"
-                className="font-bold text-white text-xl group-hover:text-white no-underline font-roboto"
-              >
-                Results
-              </Link>
-            </li>
-
-            <li className="mb-4 flex items-center">
-              <BsPersonVcard className="text-white mr-3 text-xl" />
-              <Link
-                href="#Overview"
-                className="font-bold text-white text-xl group-hover:text-white no-underline font-roboto"
-              >
-                Drivers
-              </Link>
-            </li>
-
-            <li className="mb-4 flex items-center">
-              <Icon icon="mdi:transfer" className="text-white mr-2 text-2xl" />
-              <Link
-                href="#Overview"
-                className="font-bold text-white text-xl group-hover:text-white no-underline font-roboto"
-              >
-                Transfer
-              </Link>
-            </li>
-
-            <li className="mb-4 flex items-center">
-              <PiUsersBold className="text-white mr-3 text-xl" />
-              <Link
-                href="#Overview"
-                className="font-bold text-white text-xl group-hover:text-white no-underline font-roboto"
-              >
-                Users
-              </Link>
-            </li>
-
-            <li className="mb-4 flex items-center">
-              <LuSettings className="text-white mr-3 text-xl" />
-              <Link
-                href="#Overview"
-                className="font-bold text-white text-xl group-hover:text-white no-underline font-roboto"
-              >
-                Setting
-              </Link>
+            {/* Setting */}
+            <li className="mb-4">
+              <div className="group flex items-center transition-colors duration-300 ease-in-out hover:bg-photos">
+                <div className="flex items-center w-full ml-10">
+                  <LuSettings className="text-white mr-3 text-2xl group-hover:text-skyblue" />
+                  <Link
+                    href="#Setting"
+                    className="flex-1 font-bold text-white text-xl no-underline font-roboto group-hover:text-skyblue"
+                  >
+                    Setting
+                  </Link>
+                </div>
+              </div>
             </li>
           </ul>
 
-          <div className=" font-bold lg:mb-20">
-            <div className=" mb-2 font-bold lg:mb-4 ">
+          <div className="font-bold lg:mb-2 mt-30">
+            <div className="mb-10 font-bold lg:mb-4 ">
               <div className="ml-20 w-14 h-14 bg-gray-300 rounded-2xl overflow-hidden relative">
                 <img
                   src="https://randomuser.me/api/portraits/men/1.jpg"
@@ -177,16 +218,12 @@ const Sidebar: React.FC = () => {
               </div>
 
               <div className="mt-2">
-                {" "}
                 <p className="text-white font-bold text-lg ml-20">Yvonmu</p>
                 <p className="text-white font-thin ml-6">yvonmu2@example.com</p>
               </div>
             </div>
-            <div className="ml-10">
-              <button
-                className="w-40 h-8 bg-skyblue text-white font-bold rounded"
-                style={{ top: "1066px", left: "63px" }}
-              >
+            <div className="ml-10 mb-10">
+              <button className="w-40 h-8 bg-skyblue text-white font-bold rounded">
                 Logout
               </button>
             </div>
