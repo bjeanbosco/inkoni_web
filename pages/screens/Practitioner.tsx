@@ -19,8 +19,14 @@ const Appointments: React.FC = () => {
     {
       id: 3,
       imageSrc: "https://media.istockphoto.com/id/1200980392/photo/medical-concept-of-asian-beautiful-female-doctor-in-white-coat-with-stethoscope-waist-up.jpg?s=612x612&w=0&k=20&c=nD_1Tn11kWcMZwZfnyA-lYAvNKcBeoEK_KLObBnN6Jg=",
-      title: "Dr. Emily Carter",
-      Appointments: 5,
+      title: "Dr.  Melissa Smith",
+      Appointments: 4,
+    },
+    {
+      id: 3,
+      imageSrc: "https://doctorsns.com/sites/default/files/styles/manual_teaser_squareish_large/public/2023-07/news/Dr-Audain-media_sm_0.jpg?itok=N_Tpyrvw",
+      title: "Dr. David Audain",
+      Appointments: 2,
     },
   
     // Add more appointment data with different images
@@ -62,7 +68,7 @@ const Appointments: React.FC = () => {
               <div className="flex flex-col items-center">
                 <ImageComponent imageSrc={appointment.imageSrc} />
                 <p className="text-center font-bold text-xl mt-3">{appointment.title}</p>
-                <p className="text-center text-sm"> Appointments :{appointment.Appointments}</p>
+                <p className="text-center text-sm"> today : {appointment.Appointments} Appointments </p>
               </div>
             </div>
           ))}

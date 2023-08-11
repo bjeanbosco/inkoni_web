@@ -28,11 +28,11 @@ const NewAppointments: React.FC = () => {
         </h1>
 
         {/* Square-like form container */}
-        <div className="bg-primary border border-gray-400 rounded ml-20 mr-20 p-6 mt-6 1xl">
-          <h2 className="text-xl font-bold mb-4">Patient's Infromation</h2>
+        <div className="bg-primary border border-gray-400 rounded ml-10 p-2 mt-10 1xl w-6/10">
+          <h2 className="text-xl font-bold mt-10 mb-6  ml-10">Patient's Infromation</h2>
 
           {/* Form */}
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit} className="ml-10 mr-10">
 
              {/* First Name and Last Name */}
              <div className="grid grid-cols-2 gap-4 mb-4">
@@ -114,7 +114,7 @@ const NewAppointments: React.FC = () => {
 
             {/* Register Button */}
             <div className="flex justify-center">
-              <button type="submit" className="bg-orange text-white font-bold px-4 py-2 rounded">
+              <button type="submit" className="bg-orange text-white font-bold px-4 py-2 rounded mb-10 mt-10">
                 Register
               </button>
             </div>

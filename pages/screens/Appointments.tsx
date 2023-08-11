@@ -27,7 +27,7 @@ const Appointments: React.FC = () => {
     <div className="flex ml-4">
       <Sidebar />
 
-      <div className="flex-1 bg-maincolor h-screen p-3 ml-60 p-3">
+      <div className="flex-1 bg-maincolor h-screen p-3 lg:ml-60 p-3">
       <button
           onClick={handleNewAppointmentsClick}
           className="absolute mt-4 right-4 bg-orange text-white font-bold px-4 py-2 rounded"
@@ -61,7 +61,7 @@ const Appointments: React.FC = () => {
                 </div>
                 <div className="ml-4">
                   <p>Today: 11</p>
-                  <p>This Week: 11</p>
+                  <p>This Week: 32</p>
                   <p>Emergency: 1</p>
                 </div>
               </div>
@@ -88,8 +88,8 @@ const Appointments: React.FC = () => {
                 </div>
                 <div className="ml-4">
                   <p>Today: 11</p>
-                  <p>This Week: 11</p>
-                  <p>Emergency: 1</p>
+                  <p>This Week: 30</p>
+                  <p>Emergency: 0</p>
                 </div>
               </div>
             </div>
@@ -115,7 +115,7 @@ const Appointments: React.FC = () => {
                 </div>
                 <div className="ml-4">
                   <p>Today: 11</p>
-                  <p>This Week: 11</p>
+                  <p>This Week: 16</p>
                   <p>Emergency: 1</p>
                 </div>
               </div>
@@ -141,8 +141,8 @@ const Appointments: React.FC = () => {
                 </div>
                 <div className="ml-4">
                   <p>Today: 11</p>
-                  <p>This Week: 11</p>
-                  <p>Emergency: 1</p>
+                  <p>This Week: 19</p>
+                  <p>Emergency: 4</p>
                 </div>
               </div>
             </div>
@@ -169,8 +169,8 @@ const Appointments: React.FC = () => {
                 </div>
                 <div className="ml-4">
                   <p>Today: 11</p>
-                  <p>This Week: 11</p>
-                  <p>Emergency: 1</p>
+                  <p>This Week: 07</p>
+                  <p>Emergency: 0</p>
                 </div>
               </div>
             </div>
@@ -196,8 +196,8 @@ const Appointments: React.FC = () => {
                 </div>
                 <div className="ml-4">
                   <p>Today: 11</p>
-                  <p>This Week: 11</p>
-                  <p>Emergency: 1</p>
+                  <p>This Week: 15</p>
+                  <p>Emergency: 0</p>
                 </div>
               </div>
             </div>
@@ -222,9 +222,9 @@ const Appointments: React.FC = () => {
                   </a>
                 </div>
                 <div className="ml-4">
-                  <p>Today: 11</p>
-                  <p>This Week: 11</p>
-                  <p>Emergency: 1</p>
+                  <p>Today: 09</p>
+                  <p>This Week: 12</p>
+                  <p>Emergency: 3</p>
                 </div>
               </div>
             </div>

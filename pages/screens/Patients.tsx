@@ -111,13 +111,19 @@ const Patients: React.FC = () => {
 
     // Add more user data objects as needed
   ];
+  const handleNewPatientClick = () => {
+    router.push("/screens/NewPatient");
+  };
 
   return (
     <div className="flex ml-4">
       <Sidebar />
 
       <div className="flex-1 bg-maincolor h-screen p-3 ml-60 p-3">
-        <button className="absolute mt-4 right-4 bg-orange text-white font-bold px-4 py-2 rounded">
+      <button
+          onClick={handleNewPatientClick}
+          className="absolute mt-4 right-4 bg-orange text-white font-bold px-4 py-2 rounded"
+        >
           Add Patient
         </button>
 

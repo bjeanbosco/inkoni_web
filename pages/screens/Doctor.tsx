@@ -2,8 +2,9 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import Sidebar from "./Sidebar";
-import { TbSwitchVertical } from "react-icons/tb";
+import { GrAdd } from "react-icons/gr";
 import { FiMoreVertical } from "react-icons/fi";
+
 
 const Patients: React.FC = () => {
   const router = useRouter();
@@ -86,13 +87,16 @@ const Patients: React.FC = () => {
       <Sidebar />
 
       <div className="flex-1 bg-maincolor h-screen p-3 ml-60 p-3 custom-scroll">
-        <h1 className="ml-6 mt-4 text-2xl font-bold">Doctors</h1>
-        <button
+      <button
           onClick={handleNewDoctorsClick}
           className="absolute mt-4 right-4 bg-orange text-white font-bold px-4 py-2 rounded"
         >
+           {/* <GrAdd className="text-white mr-3 text-sm" /> */}
+
           ADD DOCTOR
         </button>
+        <h1 className="ml-6 mt-4 text-2xl font-bold">Doctors</h1>
+        
 
         <div className="flex mt-6 ml-20 mt-10">
           <div>

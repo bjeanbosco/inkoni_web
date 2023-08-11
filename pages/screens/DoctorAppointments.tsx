@@ -10,11 +10,11 @@ const DoctorAppointments: React.FC = () => {
     {
       id: 1,
       imageSrc:
-        "https://randomuser.me/api/portraits/men/1.jpg", // Placeholder image
-      title: "John Doe",
+        "https://randomuser.me/api/portraits/men/12.jpg", // Placeholder image
+      title: "Mason Mount",
       age: 30,
       gender: "Male",
-      email: "johndoe@example.com",
+      email: "masonmount@gmail.com",
       nationalId: "1234567890123456",
       phoneNumber: "1234567890",
       status: "RSSB",
@@ -22,11 +22,11 @@ const DoctorAppointments: React.FC = () => {
     {
         id: 2,
         imageSrc:
-          "https://randomuser.me/api/portraits/men/1.jpg", // Placeholder image
-        title: "John Doe",
+          "https://randomuser.me/api/portraits/men/14.jpg", // Placeholder image
+        title: "Mustafa Muhamed",
         age: 30,
         gender: "Male",
-        email: "johndoe@example.com",
+        email: "mustafamuhamedi@gmail.com",
         nationalId: "1234567890123456",
         phoneNumber: "1234567890",
         status: "RSSB",
@@ -34,11 +34,11 @@ const DoctorAppointments: React.FC = () => {
       {
         id: 3,
         imageSrc:
-          "https://randomuser.me/api/portraits/men/1.jpg", // Placeholder image
-        title: "John Doe",
+          "https://randomuser.me/api/portraits/men/15.jpg", // Placeholder image
+        title: "Eddy Mendi",
         age: 30,
         gender: "Male",
-        email: "johndoe@example.com",
+        email: "mendi@gmail.com",
         nationalId: "1234567890123456",
         phoneNumber: "1234567890",
         status: "RSSB",
@@ -46,11 +46,11 @@ const DoctorAppointments: React.FC = () => {
       {
         id: 4,
         imageSrc:
-          "https://randomuser.me/api/portraits/men/1.jpg", // Placeholder image
-        title: "John Doe",
+          "https://randomuser.me/api/portraits/men/16.jpg", // Placeholder image
+        title: "John Luwasi",
         age: 30,
         gender: "Male",
-        email: "johndoe@example.com",
+        email: "johnluwasi@gmail.com",
         nationalId: "1234567890123456",
         phoneNumber: "1234567890",
         status: "Private",
@@ -63,7 +63,7 @@ const DoctorAppointments: React.FC = () => {
     <div className="flex ml-4">
       <Sidebar />
 
-      <div className="flex-1 bg-maincolor h-screen p-3 ml-60 p-3">
+      <div className="flex-1 bg-maincolor h-screen p-3 lg:ml-60 p-3">
         <h1 className="ml-10 mt-6 text-2xl font-bold">
           Appointments {">"}
           <span className="text-orange font-bold">General Practitioner</span>{" > "}
@@ -71,7 +71,7 @@ const DoctorAppointments: React.FC = () => {
         </h1>
 
         {/* Table */}
-        <div className="mt-10 ml-10 mr-40">
+        <div className="mt-10 w-6/10 ml-20 ">
           <table className="table-auto w-full">
             <tbody>
               {squaresData.map((user) => (

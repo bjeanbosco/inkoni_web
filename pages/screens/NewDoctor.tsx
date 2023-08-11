@@ -26,15 +26,15 @@ const NewAppointments: React.FC = () => {
 
         <h1 className="ml-10 mt-6 text-2xl font-bold">
           Appointments {">"}
-          <span className="text-orange font-bold">Register Doctors</span>
+          <span className="text-orange font-bold">Register New Doctors</span>
         </h1>
 
         {/* Square-like form container */}
-        <div className="bg-primary border border-gray-400 rounded ml-40 mr-40 p-6 mt-6 1xl">
-          <h2 className="text-xl font-bold mb-4">Doctor Infromation</h2>
+        <div className="bg-primary border border-gray-400 rounded ml-10 p-2 mt-10 1xl w-6/10">
+          <h2 className="text-xl font-bold mt-10 mb-6  ml-10">Doctor Infromation</h2>
 
           {/* Form */}
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit} className="ml-10 mr-10">
            
 
             {/* Identification Number */}
@@ -98,21 +98,19 @@ const NewAppointments: React.FC = () => {
             </div>
              {/* Date of Birth and Appointment Date */}
              <div className="mb-4">
-              <div>
-                <label htmlFor="dateOfBirth">Date of Birth</label>
-                <input
-                  type="date"
-                  id="dateOfBirth"
-                  value={dateOfBirth}
-                  onChange={(e) => setDateOfBirth(e.target.value)}
-                  className="border rounded p-2 w-full bg-maincolor"
-                />
-              </div>
+              <label htmlFor="schedule">Schedule</label>
+              <input
+                type="text"
+                id="schedule"
+                value={identificationNumber}
+                onChange={(e) => setIdentificationNumber(e.target.value)}
+                className="border rounded p-2 w-full bg-maincolor"
+              />
             </div>
 
             {/* Register Button */}
             <div className="flex justify-center">
-              <button type="submit" className="bg-orange text-white font-bold px-4 py-2 rounded">
+              <button type="submit" className="bg-orange text-white font-bold px-10 py-2 rounded mb-10 mt-10">
                 Register
               </button>
             </div>
