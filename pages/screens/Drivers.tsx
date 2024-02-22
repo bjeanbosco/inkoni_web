@@ -19,6 +19,7 @@ const Patients: React.FC = () => {
       email: "nicolascage@gmail.com",
       nationalId: "1234567890123456",
       phoneNumber: "+1234567890",
+      drivingLicense: "1234567890123456",
       status: "RSSB",
     },
     {
@@ -30,6 +31,7 @@ const Patients: React.FC = () => {
       email: "nicolegold@gmail.com",
       nationalId: "1234567890123456",
       phoneNumber: "+1234567890",
+      drivingLicense: "1234567890123456",
       status: "RSSB",
     },
     {
@@ -41,6 +43,7 @@ const Patients: React.FC = () => {
       email: "johndoe@example.com",
       nationalId: "1234567890123456",
       phoneNumber: "+1234567890",
+      drivingLicense: "1234567890123456",
       status: "RSSB",
     },
     {
@@ -52,6 +55,7 @@ const Patients: React.FC = () => {
       email: "johndoe@example.com",
       nationalId: "1234567890123456",
       phoneNumber: "+1234567890",
+      drivingLicense: "1234567890123456",
       status: "Private",
     },
     {
@@ -63,6 +67,7 @@ const Patients: React.FC = () => {
       email: "johndoe@example.com",
       nationalId: "1234567890123456",
       phoneNumber: "+1234567890",
+      drivingLicense: "1234567890123456",
       status: "Private",
     },
     {
@@ -74,16 +79,17 @@ const Patients: React.FC = () => {
       email: "johndoe@example.com",
       nationalId: "1234567890123456",
       phoneNumber: "+1234567890",
+      drivingLicense: "1234567890123456",
       status: "Private",
     },
 
     // Add more user data objects as needed
   ];
   const handleNewDoctorsClick = () => {
-    router.push("/screens/NewDoctor");
+    router.push("/screens/NewDriver");
   };
   return (
-    <div className="flex ml-4">
+    <div className="flex ml-4 w-full">
       <Sidebar />
 
       <div className="flex-1 bg-maincolor h-screen p-3 ml-60  custom-scroll">
@@ -93,53 +99,45 @@ const Patients: React.FC = () => {
         >
            {/* <GrAdd className="text-white mr-3 text-sm" /> */}
 
-          ADD DOCTOR
+          + REGISTER DRIVER
         </button>
-        <h1 className="ml-6 mt-4 text-3xl font-bold-800  text-white">Doctors</h1>
-        
-
-        <div className="flex ml-20 mt-10">
-          <div>
-            <input
-              type="text"
-              id="search"
-              placeholder="Search ...."
-              className="border rounded p-2 pr-10 py-3 px-10 w-96 bg-maincolor"
-            />
-          </div>
-        </div>
 
         {/* Table */}
-        <div className="mt-10 ml-20">
+        <div className="mt-10 ml-20 pt-40 w-full">
           <table className="border-collapse border w-7/10">
             <thead className="ml-2">
               <tr className="w-full border text-white font-bold-600 text-2xl">
-                <th className="px-2 py-1 border">Names & Phone</th>
-                <th className="px-2 py-1 border">Matriculation</th>
-                <th className="px-2 py-1 border">Designation</th>
-                <th className="px-2 py-1 ">Schedule</th>
+                <th className="px-2 py-1 border">Drivers</th>
+                <th className="px-2 py-1 border">ID number</th>
+                <th className="px-2 py-1 border">Driving License</th>
+                <th className="px-2 py-1 ">Phone</th>
+                <th className="px-2 py-1 ">Plate no</th>
               </tr>
             </thead>
             <tbody>
               {squaresData.map((user) => (
                 <React.Fragment key={user.id}>
                   <tr className="border-b text-white">
-                    <td className="px-3 py-2 text-white">
+                  <td className="px-4 py-2 w-30 flex">
+                      <div className="w-10 h-10 rounded-full overflow-hidden">
+                        <img
+                          src={user.imageSrc}
+                          alt={user.title}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                      <span>
                       {user.title}
                       <br />
-                      <span className="text-sm text-gray-500">
-                        {user.phoneNumber}
+                      <span className="text-sm text-white">
+                        {user.email}
+                      </span>
                       </span>
                     </td>
-                    <td className="px-4 py-2">xxxxxxxxxxxx</td>
-                    <td className="px-4 py-2">PEDIATRICS</td>
-                    <td className="px-4 py-3 schedule-cell">
-                      Monday (5pm-8pm)
-                      <br />
-                      Friday (8am-5pm)
-                      <br />
-                      Sunday (9am-5pm)
-                    </td>
+                    <td className="px-4 py-2">{user.nationalId}</td>
+                    <td className="px-4 py-2">{user.drivingLicense}</td>
+                    <td className="px-4 py-2"> {user.phoneNumber}</td>
+                    <td> {user.id}</td>
                     <span className="text-gray-500 cursor-pointer hover:underline">
                       <FiMoreVertical className="inline-block h-4 w-4 mr-1" />
                     </span>

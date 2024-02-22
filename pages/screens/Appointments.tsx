@@ -27,7 +27,7 @@ const Appointments: React.FC = () => {
     <div className="flex ml-4">
       <Sidebar />
 
-      <div className="flex-1 bg-maincolor h-screen p-3 lg:ml-60 p-3">
+      <div className="flex-1 bg-maincolor h-screen p-3 lg:ml-60 text-white font-bold">
       <button
           onClick={handleNewAppointmentsClick}
           className="absolute mt-4 right-4 bg-orange text-white font-bold px-4 py-2 rounded"

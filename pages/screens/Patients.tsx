@@ -119,7 +119,7 @@ const Patients: React.FC = () => {
     <div className="flex ml-4">
       <Sidebar />
 
-      <div className="flex-1 bg-maincolor h-screen p-3 ml-60 p-3">
+      <div className="flex-1 bg-maincolor h-screen ml-60 p-3">
       <button
           onClick={handleNewPatientClick}
           className="absolute mt-4 right-4 bg-orange text-white font-bold px-4 py-2 rounded"
@@ -151,7 +151,7 @@ const Patients: React.FC = () => {
         </div>
 
         {/* Table */}
-        <div className="mt-10  ml-20 ">
+        <div className="mt-10  ml-20 text-white">
           <table className="border-collapse w-7/10">
             <thead className="ml-2 ">
               <tr className="w-full border">
@@ -178,7 +178,7 @@ const Patients: React.FC = () => {
                     <td className="px-4 py-2">
                       {user.title}
                       <br />
-                      <span className="text-sm text-gray-500">
+                      <span className="text-sm text-white">
                         {user.email}
                       </span>
                     </td>

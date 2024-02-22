@@ -6,9 +6,19 @@ import { PiUsersBold } from "react-icons/pi";
 import { LuSettings, LuCalendarDays } from "react-icons/lu";
 import { BsBagPlusFill, BsPersonVcard } from "react-icons/bs";
 import { FaUserClock } from "react-icons/fa";
+import { FaCar } from 'react-icons/fa';
+import { FaSearch } from 'react-icons/fa';
+import { FaUserCircle } from 'react-icons/fa';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDonate, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faExchangeAlt } from '@fortawesome/free-solid-svg-icons';
+import { faAngleDoubleLeft } from '@fortawesome/free-solid-svg-icons';
+import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
+import { faNotesMedical } from '@fortawesome/free-solid-svg-icons';
+import { faAd } from '@fortawesome/free-solid-svg-icons';
 import { Icon } from "@iconify/react";
 
-const Sidebar: React.FC = () => {
+const SecondSideBar : React.FC = () => {
   const router = useRouter();
   const { pathname } = router;
 
@@ -66,10 +76,13 @@ const Sidebar: React.FC = () => {
         } lg:w-1.5/10 bg-primary fixed top-0 bottom-0 left-0 flex flex-col justify-between z-50 overflow-y-auto transition-all duration-300 ease-in-out`}
       >
         <div className="mt-4">
-          <h1 className="mx-4 mt-4 mb-8 text-white text-xl font-normal leading-8 tracking-wider text-left font-abel ml-10 underline">
-            LA CROIX DU SUD
+          <h1 className="mx-6 mt-2 mb-8 text-white text-5xl font-normal leading-8 tracking-wider text-left font-abel ml-10 ">
+            E-<span className="text-blue-500">PAY</span>
           </h1>
-
+          <div className="flex justify-end">
+          <FontAwesomeIcon icon={faAngleDoubleLeft} className="text-blue-500 text-2xl"/>
+          </div>
+       
           <ul className="mt-10">
             {/*  begining li  */}
 
@@ -91,12 +104,12 @@ const Sidebar: React.FC = () => {
             <li className="mb-4">
               <div className="group flex items-center transition-colors duration-300 ease-in-out hover:bg-photos">
                 <div className="flex items-center w-full ml-10">
-                  <LuCalendarDays className="text-white mr-3 text-2xl group-hover:text-skyblue" />
+                  <FaSearch className="text-white mr-3 text-2xl group-hover:text-skyblue" />
                   <Link
                     href="/screens/Appointments"
                     className="flex-1 font-bold text-white text-xl no-underline font-roboto group-hover:text-skyblue"
                   >
-                    Appointments
+                    Search
                   </Link>
                 </div>
               </div>
@@ -107,12 +120,12 @@ const Sidebar: React.FC = () => {
             <li className="mb-4">
               <div className="group flex items-center transition-colors duration-300 ease-in-out hover:bg-photos">
                 <div className="flex items-center w-full ml-10">
-                  <BsBagPlusFill className="text-white mr-3 text-2xl group-hover:text-skyblue" />
+                  <FaUserCircle className="text-white mr-3 text-2xl group-hover:text-skyblue" />
                   <Link
                     href="/screens/Doctor"
                     className="flex-1 font-bold text-white text-xl no-underline font-roboto group-hover:text-skyblue"
                   >
-                    Doctors
+                    Profile
                   </Link>
                 </div>
               </div>
@@ -126,8 +139,9 @@ const Sidebar: React.FC = () => {
                     href="/screens/Patients"
                     className="flex-1 font-bold text-white text-xl no-underline font-roboto group-hover:text-skyblue"
                   >
-                    Patients
+                    Event
                   </Link>
+                  <FontAwesomeIcon icon={faAngleDown} className="text-white text-2xl pr-24"/>
                 </div>
               </div>
             </li>
@@ -135,13 +149,14 @@ const Sidebar: React.FC = () => {
             <li className="mb-4">
               <div className="group flex items-center transition-colors duration-300 ease-in-out hover:bg-photos">
                 <div className="flex items-center w-full ml-10">
-                  <MdOutlineManageSearch className="text-white mr-3 text-2xl group-hover:text-skyblue" />
+                  <FontAwesomeIcon icon={faNotesMedical} className="text-white mr-3 text-2xl group-hover:text-skyblue" />
                   <Link
-                    href="Result"
+                    href="#Results"
                     className="flex-1 font-bold text-white text-xl no-underline font-roboto group-hover:text-skyblue"
                   >
-                    Results
+                    Health
                   </Link>
+                  <FontAwesomeIcon icon={faAngleDown} className="text-white text-2xl pr-24"/>
                 </div>
               </div>
             </li>
@@ -149,12 +164,27 @@ const Sidebar: React.FC = () => {
             <li className="mb-4">
               <div className="group flex items-center transition-colors duration-300 ease-in-out hover:bg-photos">
                 <div className="flex items-center w-full ml-10">
-                  <BsPersonVcard className="text-white mr-3 text-2xl group-hover:text-skyblue" />
+                  <FaCar className="text-white mr-3 text-2xl group-hover:text-skyblue" />
                   <Link
-                    href="Drivers"
+                    href="#Drivers"
                     className="flex-1 font-bold text-white text-xl no-underline font-roboto group-hover:text-skyblue"
                   >
-                    Drivers
+                    Cars
+                  </Link>
+                  <FontAwesomeIcon icon={faAngleDown} className="text-white text-2xl pr-24"/>
+                </div>
+              </div>
+            </li>
+            {/*ads */}
+            <li className="mb-4">
+              <div className="group flex items-center transition-colors duration-300 ease-in-out hover:bg-photos">
+                <div className="flex items-center w-full ml-10">
+                  <FontAwesomeIcon icon={faAd}  className="text-white mr-3 text-2xl group-hover:text-skyblue" />
+                  <Link
+                    href="#Drivers"
+                    className="flex-1 font-bold text-white text-xl no-underline font-roboto group-hover:text-skyblue"
+                  >
+                    Ads
                   </Link>
                 </div>
               </div>
@@ -187,6 +217,7 @@ const Sidebar: React.FC = () => {
                   >
                     Users
                   </Link>
+                  <FontAwesomeIcon icon={faAngleDown} className="text-white text-2xl pr-24"/>
                 </div>
               </div>
             </li>
@@ -195,12 +226,27 @@ const Sidebar: React.FC = () => {
             <li className="mb-4">
               <div className="group flex items-center transition-colors duration-300 ease-in-out hover:bg-photos">
                 <div className="flex items-center w-full ml-10">
-                  <LuSettings className="text-white mr-3 text-2xl group-hover:text-skyblue" />
+                  <FontAwesomeIcon icon={faDonate}  className="text-white mr-3 text-2xl group-hover:text-skyblue" />
                   <Link
                     href="#Setting"
                     className="flex-1 font-bold text-white text-xl no-underline font-roboto group-hover:text-skyblue"
                   >
-                    Setting
+                    Donation
+                  </Link>
+                </div>
+              </div>
+            </li>
+
+            {/*transaction */}
+            <li className="mb-4">
+              <div className="group flex items-center transition-colors duration-300 ease-in-out hover:bg-photos">
+                <div className="flex items-center w-full ml-10">
+                  <FontAwesomeIcon icon={faExchangeAlt}  className="text-white mr-3 text-2xl group-hover:text-skyblue" />
+                  <Link
+                    href="#Setting"
+                    className="flex-1 font-bold text-white text-xl no-underline font-roboto group-hover:text-skyblue"
+                  >
+                    Transaction
                   </Link>
                 </div>
               </div>
@@ -233,4 +279,4 @@ const Sidebar: React.FC = () => {
     </div>
   );
 };
-export default Sidebar;
+export default SecondSideBar

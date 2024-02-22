@@ -63,7 +63,7 @@ const DoctorAppointments: React.FC = () => {
     <div className="flex ml-4">
       <Sidebar />
 
-      <div className="flex-1 bg-maincolor h-screen p-3 lg:ml-60 p-3">
+      <div className="flex-1 bg-maincolor h-screen  lg:ml-60 p-3">
         <h1 className="ml-10 mt-6 text-2xl font-bold">
           Appointments {">"}
           <span className="text-orange font-bold">General Practitioner</span>{" > "}
