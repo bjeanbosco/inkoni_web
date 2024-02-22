@@ -9,14 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
-<<<<<<< HEAD
-    "@hapi/joi": "^17.1.1",
-=======
     "@emotion/react": "^11.11.1",
     "@fortawesome/free-solid-svg-icons": "^6.4.2",
     "@fortawesome/react-fontawesome": "^0.2.0",
+    "@hapi/joi": "^17.1.1",
     "@mui/icons-material": "^5.14.1",
->>>>>>> main
     "@types/node": "20.4.1",
     "@types/react": "18.2.14",
     "@types/react-dom": "18.2.6",
@@ -24,6 +21,7 @@
     "bcrypt": "^5.1.0",
     "eslint": "8.44.0",
     "eslint-config-next": "13.4.9",
+    "joi": "^17.12.2",
     "next": "13.4.9",
     "pg": "^8.11.1",
     "postcss": "8.4.25",
@@ -34,12 +32,9 @@
     "typescript": "5.1.6"
   },
   "devDependencies": {
-<<<<<<< HEAD
+    "@iconify/react": "^4.1.1",
     "@types/bcrypt": "^5.0.0",
     "@types/hapi__joi": "^17.1.9",
     "@types/pg": "^8.10.2"
-=======
-    "@iconify/react": "^4.1.1"
->>>>>>> main
   }
 }

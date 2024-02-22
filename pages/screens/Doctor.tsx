@@ -86,7 +86,7 @@ const Patients: React.FC = () => {
     <div className="flex ml-4">
       <Sidebar />
 
-      <div className="flex-1 bg-maincolor h-screen p-3 ml-60 p-3 custom-scroll">
+      <div className="flex-1 bg-maincolor h-screen p-3 ml-60  custom-scroll">
       <button
           onClick={handleNewDoctorsClick}
           className="absolute mt-4 right-4 bg-orange text-white font-bold px-4 py-2 rounded"
@@ -95,10 +95,10 @@ const Patients: React.FC = () => {
 
           ADD DOCTOR
         </button>
-        <h1 className="ml-6 mt-4 text-2xl font-bold">Doctors</h1>
+        <h1 className="ml-6 mt-4 text-3xl font-bold-800  text-white">Doctors</h1>
         
 
-        <div className="flex mt-6 ml-20 mt-10">
+        <div className="flex ml-20 mt-10">
           <div>
             <input
               type="text"
@@ -113,7 +113,7 @@ const Patients: React.FC = () => {
         <div className="mt-10 ml-20">
           <table className="border-collapse border w-7/10">
             <thead className="ml-2">
-              <tr className="w-full border">
+              <tr className="w-full border text-white font-bold-600 text-2xl">
                 <th className="px-2 py-1 border">Names & Phone</th>
                 <th className="px-2 py-1 border">Matriculation</th>
                 <th className="px-2 py-1 border">Designation</th>
@@ -123,8 +123,8 @@ const Patients: React.FC = () => {
             <tbody>
               {squaresData.map((user) => (
                 <React.Fragment key={user.id}>
-                  <tr className="border-b">
-                    <td className="px-3 py-2">
+                  <tr className="border-b text-white">
+                    <td className="px-3 py-2 text-white">
                       {user.title}
                       <br />
                       <span className="text-sm text-gray-500">
