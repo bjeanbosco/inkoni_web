@@ -64,7 +64,7 @@ const DoctorAppointments: React.FC = () => {
       <Sidebar />
 
       <div className="flex-1 bg-maincolor h-screen  lg:ml-60 p-3">
-        <h1 className="ml-10 mt-6 text-2xl font-bold">
+        <h1 className="ml-10 mt-6 text-2xl font-bold text-white">
           Appointments {">"}
           <span className="text-orange font-bold">General Practitioner</span>{" > "}
           <span className="text-blue-300">Dr.Tanto Spiral</span>
@@ -87,12 +87,12 @@ const DoctorAppointments: React.FC = () => {
                       </div>
                     </td>
                     <td className="px-4 py-2">
-                      <p className="font-bold">{user.title}</p>
+                      <p className="font-bold text-white">{user.title}</p>
                       <p className="text-sm text-gray-500">{user.email}</p>
                     </td>
-                    <td className="px-4 py-2">{user.nationalId}</td>
-                    <td className="px-4 py-2">{user.phoneNumber}</td>
-                    <td className="px-4 py-2">{user.status}</td>
+                    <td className="px-4 py-2 text-white">{user.nationalId}</td>
+                    <td className="px-4 py-2 text-white">{user.phoneNumber}</td>
+                    <td className="px-4 py-2 text-white">{user.status}</td>
                   </tr>
                   <tr>
                     <td colSpan={5} className="border-t"></td>

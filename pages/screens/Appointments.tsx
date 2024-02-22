@@ -44,11 +44,11 @@ const Appointments: React.FC = () => {
           {squaresData.map((appointment) => (
             <div
               key={appointment.id}
-              className="bg-photos p-2 rounded-md shadow-md"
+              className="bg-photos p-2 rounded-2xl shadow-inner m-2"
             >
-              <div className="flex items-center">
+              <div className="flex items-center rounded-xl">
                 <div className="relative ml-4 mb-4">
-                  <h1 className="text-xl font-bold mb-3 ml-4  text-center">
+                  <h1 className="text-2xl font-bold mb-3 ml-4  text-center">
                     {appointment.title}
                   </h1>
                   <a href="/screens/Practitioner">
@@ -60,8 +60,8 @@ const Appointments: React.FC = () => {
                   </a>
                 </div>
                 <div className="ml-4">
-                  <p>Today: 11</p>
-                  <p>This Week: 32</p>
+                  <p className="pb-2">Today: 11</p>
+                  <p className="pb-2">This Week: 32</p>
                   <p>Emergency: 1</p>
                 </div>
               </div>
@@ -71,11 +71,11 @@ const Appointments: React.FC = () => {
           {squaresData.map((appointment) => (
             <div
               key={appointment.id}
-              className="bg-photos p-2 rounded-md shadow-md"
+              className="bg-photos p-2 rounded-2xl shadow-inner m-2"
             >
               <div className="flex items-center">
                 <div className="relative ml-4 mb-4">
-                  <h1 className="text-xl font-bold mb-3 ml-4  text-center">
+                  <h1 className="text-2xl font-bold mb-3 ml-4  text-center">
                   Pediatrics
                   </h1>
                   <a href="/screens/Practitioner">
@@ -87,8 +87,8 @@ const Appointments: React.FC = () => {
                   </a>
                 </div>
                 <div className="ml-4">
-                  <p>Today: 11</p>
-                  <p>This Week: 30</p>
+                  <p className="pb-2">Today: 11</p>
+                  <p className="pb-2">This Week: 30</p>
                   <p>Emergency: 0</p>
                 </div>
               </div>
@@ -98,11 +98,11 @@ const Appointments: React.FC = () => {
           {squaresData.map((appointment) => (
             <div
               key={appointment.id}
-              className="bg-photos p-2 rounded-md shadow-md"
+              className="bg-photos p-2 rounded-2xl shadow-inner m-2"
             >
               <div className="flex items-center">
                 <div className="relative ml-4 mb-4">
-                  <h1 className="text-xl font-bold mb-3 ml-4  text-center">
+                  <h1 className="text-2xl font-bold mb-3 ml-4  text-center">
                   Gastroenterology
                   </h1>
                   <a href="/screens/Practitioner">
@@ -114,8 +114,8 @@ const Appointments: React.FC = () => {
                   </a>
                 </div>
                 <div className="ml-4">
-                  <p>Today: 11</p>
-                  <p>This Week: 16</p>
+                  <p className="pb-2">Today: 11</p>
+                  <p className="pb-2">This Week: 16</p>
                   <p>Emergency: 1</p>
                 </div>
               </div>
@@ -124,11 +124,11 @@ const Appointments: React.FC = () => {
          {squaresData.map((appointment) => (
             <div
               key={appointment.id}
-              className="bg-photos p-2 rounded-md shadow-md"
+              className="bg-photos p-2 rounded-2xl shadow-inner m-2"
             >
               <div className="flex items-center">
                 <div className="relative ml-4 mb-4">
-                  <h1 className="text-xl font-bold mb-3 ml-4  text-center">
+                  <h1 className="text-2xl font-bold mb-3 ml-4  text-center">
                   Ophthalmology
                   </h1>
                   <a href="/screens/Practitioner">
@@ -140,9 +140,9 @@ const Appointments: React.FC = () => {
                   </a>
                 </div>
                 <div className="ml-4">
-                  <p>Today: 11</p>
-                  <p>This Week: 19</p>
-                  <p>Emergency: 4</p>
+                  <p className="pb-2">Today: 11</p>
+                  <p className="pb-2">This Week: 19</p>
+                  <p className="pb-2">Emergency: 4</p>
                 </div>
               </div>
             </div>
@@ -152,11 +152,11 @@ const Appointments: React.FC = () => {
           {squaresData.map((appointment) => (
             <div
               key={appointment.id}
-              className="bg-photos p-2 rounded-md shadow-md"
+              className="bg-photos p-2 rounded-2xl shadow-inner m-2"
             >
               <div className="flex items-center">
                 <div className="relative ml-4 mb-4">
-                  <h1 className="text-xl font-bold mb-3 ml-4  text-center">
+                  <h1 className="text-2xl font-bold mb-3 ml-4  text-center">
                     Dentists
                   </h1>
                   <a href="/screens/Practitioner">
@@ -168,8 +168,8 @@ const Appointments: React.FC = () => {
                   </a>
                 </div>
                 <div className="ml-4">
-                  <p>Today: 11</p>
-                  <p>This Week: 07</p>
+                  <p className="pb-2">Today: 11</p>
+                  <p className="pb-2">This Week: 07</p>
                   <p>Emergency: 0</p>
                 </div>
               </div>
@@ -179,11 +179,11 @@ const Appointments: React.FC = () => {
            {squaresData.map((appointment) => (
             <div
               key={appointment.id}
-              className="bg-photos p-2 rounded-md shadow-md"
+              className="bg-photos p-2 rounded-2xl shadow-inner m-2"
             >
               <div className="flex items-center">
                 <div className="relative ml-4 mb-4">
-                  <h1 className="text-xl font-bold mb-3 ml-4  text-center">
+                  <h1 className="text-2xl font-bold mb-3 ml-4  text-center">
                    Neology
                   </h1>
                   <a href="/screens/Practitioner">
@@ -195,8 +195,8 @@ const Appointments: React.FC = () => {
                   </a>
                 </div>
                 <div className="ml-4">
-                  <p>Today: 11</p>
-                  <p>This Week: 15</p>
+                  <p className="pb-2">Today: 11</p>
+                  <p className="pb-2">This Week: 15</p>
                   <p>Emergency: 0</p>
                 </div>
               </div>
@@ -206,11 +206,11 @@ const Appointments: React.FC = () => {
            {squaresData.map((appointment) => (
             <div
               key={appointment.id}
-              className="bg-photos p-2 rounded-md shadow-md"
+              className="bg-photos p-2 rounded-2xl shadow-inner m-2"
             >
               <div className="flex items-center">
                 <div className="relative ml-4 mb-4">
-                  <h1 className="text-xl font-bold mb-3 ml-4  text-center">
+                  <h1 className="text-2xl font-bold mb-3 ml-4  text-center">
                     Cardiology
                   </h1>
                   <a href="/screens/Practitioner">
@@ -222,8 +222,8 @@ const Appointments: React.FC = () => {
                   </a>
                 </div>
                 <div className="ml-4">
-                  <p>Today: 09</p>
-                  <p>This Week: 12</p>
+                  <p className="pb-2">Today: 09</p>
+                  <p className="pb-2">This Week: 12</p>
                   <p>Emergency: 3</p>
                 </div>
               </div>
@@ -233,11 +233,11 @@ const Appointments: React.FC = () => {
            {squaresData.map((appointment) => (
             <div
               key={appointment.id}
-              className="bg-photos p-2 rounded-md shadow-md"
+              className="bg-photos p-2 rounded-2xl shadow-inner m-2"
             >
               <div className="flex items-center">
                 <div className="relative ml-4 mb-4">
-                  <h1 className="text-xl font-bold mb-3 ml-4  text-center">
+                  <h1 className="text-2xl font-bold mb-3 ml-4  text-center">
                     Determinology
                   </h1>
                   <a href="/screens/Practitioner">
@@ -249,8 +249,8 @@ const Appointments: React.FC = () => {
                   </a>
                 </div>
                 <div className="ml-4">
-                  <p>Today: 11</p>
-                  <p>This Week: 11</p>
+                  <p className="pb-2">Today: 11</p>
+                  <p className="pb-2">This Week: 11</p>
                   <p>Emergency: 1</p>
                 </div>
               </div>

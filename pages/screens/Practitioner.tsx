@@ -47,7 +47,7 @@ const Appointments: React.FC = () => {
           New Appointments
         </button>
 
-        <h1 className="ml-6 mt-10 text-2xl font-bold">
+        <h1 className="ml-6 mt-10 text-2xl font-bold text-white">
           Appointments {">"}{" "}
           <span className="text-orange">General Practitioner</span>
         </h1>
@@ -67,8 +67,8 @@ const Appointments: React.FC = () => {
             >
               <div className="flex flex-col items-center">
                 <ImageComponent imageSrc={appointment.imageSrc} />
-                <p className="text-center font-bold text-xl mt-3">{appointment.title}</p>
-                <p className="text-center text-sm"> today : {appointment.Appointments} Appointments </p>
+                <p className="text-center font-bold text-xl mt-3 text-white">{appointment.title}</p>
+                <p className="text-center text-sm text-white"> today : {appointment.Appointments} Appointments </p>
               </div>
             </div>
           ))}

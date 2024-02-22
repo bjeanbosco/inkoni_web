@@ -24,14 +24,14 @@ const NewAppointments: React.FC = () => {
 
       <div className="flex-1 bg-maincolor h-screen p-3 ml-60 p-3">
 
-        <h1 className="ml-10 mt-6 text-2xl font-bold">
-          Appointments {">"}
+        <h1 className="ml-10 mt-6 text-2xl font-bold text-white">
+          DOCTORS {">"}
           <span className="text-orange font-bold">Register New Doctors</span>
         </h1>
 
         {/* Square-like form container */}
         <div className="bg-primary border border-gray-400 rounded ml-10 p-2 mt-10 1xl w-6/10">
-          <h2 className="text-xl font-bold mt-10 mb-6  ml-10">Doctor Infromation</h2>
+          <h2 className="text-xl font-bold text-white mt-10 mb-6  ml-10">Doctor Information</h2>
 
           {/* Form */}
           <form onSubmit={handleSubmit} className="ml-10 mr-10">
@@ -39,7 +39,7 @@ const NewAppointments: React.FC = () => {
 
             {/* Identification Number */}
             <div className="mb-4">
-              <label htmlFor="identificationNumber">Marticulation Number</label>
+              <label htmlFor="identificationNumber" className="text-white">Marticulation Number</label>
               <input
                 type="text"
                 id="identificationNumber"
@@ -51,7 +51,7 @@ const NewAppointments: React.FC = () => {
              {/* First Name and Last Name */}
              <div className="grid grid-cols-2 gap-4 mb-4">
               <div>
-                <label htmlFor="firstName">First Name</label>
+                <label htmlFor="firstName" className="text-white">First Name</label>
                 <input
                   type="text"
                   id="firstName"
@@ -61,7 +61,7 @@ const NewAppointments: React.FC = () => {
                 />
               </div>
               <div>
-                <label htmlFor="lastName">Last Name</label>
+                <label htmlFor="lastName" className="text-white">Last Name</label>
                 <input
                   type="text"
                   id="lastName"
@@ -74,7 +74,7 @@ const NewAppointments: React.FC = () => {
 
               {/* phone Number */}
               <div className="mb-4">
-              <label htmlFor="phoneNumber">phone Number</label>
+              <label htmlFor="phoneNumber" className="text-white">phone Number</label>
               <input
                  type="text"
                  id="phoneNumber"
@@ -85,7 +85,7 @@ const NewAppointments: React.FC = () => {
             </div>
             {/* specialized in */}
             <div className="mb-4">
-              <label htmlFor="selectedService">Specialized In</label>
+              <label htmlFor="selectedService" className="text-white">Specialized In</label>
               <select
                 id="selectedService"
                 value={selectedService}
@@ -98,7 +98,7 @@ const NewAppointments: React.FC = () => {
             </div>
              {/* Date of Birth and Appointment Date */}
              <div className="mb-4">
-              <label htmlFor="schedule">Schedule</label>
+              <label htmlFor="schedule" className="text-white">Schedule</label>
               <input
                 type="text"
                 id="schedule"

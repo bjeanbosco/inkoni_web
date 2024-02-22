@@ -60,7 +60,7 @@ const NewAppointments: React.FC = () => {
            
 
             {/* Identification Number */}
-            <div className="mb-4">
+            <div className="mb-4 text-white">
               <label htmlFor="identificationNumber" className="text-white">Identification Number</label>
               <input
                 type="text"

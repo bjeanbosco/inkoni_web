@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import Sidebar from './screens/Sidebar'
-import SecondSideBar from './screens/SecondeSideBar'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
@@ -9,7 +8,7 @@ export default function Home() {
     <main
       className={`bg-black w-full mx-10 ${inter.className}`}
     >
-      <SecondSideBar/>
+      <Sidebar/>
     </main>
   )
 }
