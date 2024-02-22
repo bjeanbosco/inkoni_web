@@ -14,7 +14,11 @@
     "@fortawesome/free-solid-svg-icons": "^6.4.2",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@hapi/joi": "^17.1.1",
+<<<<<<< HEAD
     "@mui/icons-material": "^5.15.10",
+=======
+    "@mui/icons-material": "^5.14.1",
+>>>>>>> 9471547254fc6e9159b80cf0f7961694a4588d7f
     "@types/node": "20.4.1",
     "@types/react": "18.2.14",
     "@types/react-dom": "18.2.6",
