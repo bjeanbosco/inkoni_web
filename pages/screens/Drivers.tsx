@@ -5,7 +5,6 @@ import Sidebar from "./Sidebar";
 import { GrAdd } from "react-icons/gr";
 import { FiMoreVertical } from "react-icons/fi";
 
-
 const Patients: React.FC = () => {
   const router = useRouter();
   const { pathname } = router;
@@ -98,8 +97,8 @@ const Patients: React.FC = () => {
           className="absolute mt-4 right-4 bg-orange text-white font-bold px-4 py-2 rounded"
         >
            {/* <GrAdd className="text-white mr-3 text-sm" /> */}
-
-          + REGISTER DRIVER
+           <FontAwesomeIcon icon={faPlus} className="pr-2"/>
+           REGISTER DRIVER
         </button>
 
         {/* Table */}

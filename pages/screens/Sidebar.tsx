@@ -168,7 +168,7 @@ const Sidebar: React.FC = () => {
                     className="text-white mr-3 text-2xl group-hover:text-skyblue"
                   />
                   <Link
-                    href="#Transfer"
+                    href="Transfer"
                     className="flex-1 font-bold text-white text-xl no-underline font-roboto group-hover:text-skyblue"
                   >
                     Transfer

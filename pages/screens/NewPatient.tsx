@@ -29,7 +29,7 @@ const NewAppointments: React.FC = () => {
 
         {/* Square-like form container */}
         <div className="bg-primary border border-gray-400 rounded ml-10 p-2 mt-10 1xl w-6/10">
-          <h2 className="text-xl font-bold mt-10 mb-6  ml-10 text-white">Patient's Infromation</h2>
+          <h2 className="text-xl font-bold mt-10 mb-6  ml-10 text-white">Patient's Information</h2>
 
           {/* Form */}
           <form onSubmit={handleSubmit} className="ml-10 mr-10">
